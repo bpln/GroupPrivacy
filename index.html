@@ -22,34 +22,46 @@
 				<div id="index_image">
 					<img src="figures/index_figure_200.jpg" alt="index_image" />
 				</div>
-				<b><big>GroupPriv</big></b> is a new privacy-aware data disclosure scheme that considers group privacy requirements of individuals in bipartite association graph datasets (e.g., graphs that represent associations between entities such as customers and products bought from a pharmacy store) where even aggregate information about groups of individuals may be sensitive and need protection.
+				<b><big>GroupPriv</big></b> is a privacy-aware data disclosure scheme that considers group privacy 
+				requirements of individuals in bipartite association graph datasets (e.g., graphs that represent 
+				associations between entities such as customers and products bought from a pharmacy store). 
+				
 				<br /><br />
-				We make three original contributions:
-				<ul>
-					<li>We propose the notion of &epsilon;<sub>g</sub>-Group Differential Privacy that protects sensitive information of groups of individuals at various defined group protection levels, enabling data users to obtain the level of information entitled to them.</li>
-					<li>We develop a suite of differentially private mechanisms that protect group privacy in bipartite association graphs at different group privacy levels based on specialization hierarchies.</li>
-					<li>We evaluate our proposed techniques through extensive experiments on three real-world association graph datasets and our results demonstrate that the proposed techniques are effective, efficient and provide the required guarantees on group privacy.</li>
-
+				The key features include the new notion of &epsilon;<sub>g</sub>-Group Differential Privacy that
+				protects sensitive information of groups of individuals at various defined group protection
+				levels, enabling data users to obtain the level of information entitled to them.</li> 
+				It includes a suite of differentially private mechanisms that protect group privacy in bipartite 
+			        association graphs at different group privacy levels based on specialization hierarchies.</li>
+					
 				</ul> 
 				<br /><br />
 				
 				<h2>Motivation</h2> 
 				<p>
-				The traditional differential privacy mechanisms only protect the individual differential privacy.
-                The aggregate (statistical) information about individuals may not be safe for disclosure because the aggregate information itself can be sensitive and needs protection. 
+				Conventional differential privacy mechanisms are designed to protect the privacy of individual's information.
+                In certain situations, even aggregate (statistical) information about individuals may not be safe for disclosure 
+					as the aggregate information itself can be sensitive and may need protection. 
 
-                Sensitive information may arise either as:
+                In general, sensitive information may arise either as:
 
                 <ul>
-                	<li>an individual sensitive value indicating an individual’s private information (e.g., did buyer ‘Bob’ purchase the drug ‘insulin’?) in a dataset</li>
-                	<li>a statistical value representing some sensitive statistics about a group/sub-group of individuals (e.g., the total number of ‘Psychiatric’ drugs purchased by buyers in a given neighborhood represented by a zipcode).</li>
+                	<li>an individual sensitive value indicating an individual’s private information (e.g., did 
+				buyer ‘Bob’ purchase the drug ‘insulin’?) in a dataset</li>
+                	<li>a statistical value representing some sensitive statistics about a group/sub-group of
+				individuals (e.g., the total number of ‘Psychiatric’ drugs purchased by buyers in a given
+				neighborhood represented by a zipcode).</li>
                 </ul>
 				</p>
 
 				<br /><br />
 
-				<h2>Group differential privacy</h2> 
-				<div>In this work, we extend the conventional notion of differential privacy model to protect group privacy at various group granularity levels. We focus on the scenarios where one needs to protect group-level privacy in addition to individual privacy, where a group consists of a set of individuals. We define the proposed notion of g - group differential privacy by considering adjacent data sets from a group privacy perspective.</div>
+				<h2>Group Differential Privacy</h2> 
+				<div>Group Differential Privacy extends the conventional notion of differential privacy model to
+					protect privacy of groups od individuals at various group granularity levels. 
+					We focus on the scenarios where one needs to protect group-level privacy in 
+					addition to individual privacy, where a group consists of a set of individuals. 
+					We define the proposed notion of g - group differential privacy by considering
+					adjacent data sets from a group privacy perspective.</div>
 				<div id="group">
 					<img src="figures/group.jpg" alt="group" />
 				</div>
@@ -58,10 +70,15 @@
 
 				<h2>Mechanisms</h2> 
 				<p>
-				Our proposed approach consists of two parts:
+				The approach consists of two parts:
 					<ul>
-						<li>the first part of the proposed approach, namely <i>DiffPar</i> hierarchically partitions and groups the nodes and edges of the given association graph into different levels of granularity of disclosure in terms of group size considering the sensitivity of the formed groups</li>
-						<li>the second component of the algorithm, namely <i>DiffAggre</i> performs a bottom-up aggregation and noise injection to guarantee g-group differential privacy in the published dataset</li>
+						<li>The first part of the proposed approach, namely <i>DiffPar</i> hierarchically 
+							partitions and groups the nodes and edges of the given association graph
+							into different levels of granularity of disclosure in terms of group size
+							considering the sensitivity of the formed groups</li>
+						<li>The second component of the algorithm, namely <i>DiffAggre</i> performs a 
+							bottom-up aggregation and noise injection to guarantee g-group differential
+							privacy in the published dataset</li>
 					</ul>
 				</p>
 				<div id="mechanism">
@@ -106,7 +123,7 @@
 
 		<div id="footer">
 			<p>
-				Design by <a href="http://www.minimalistic-design.com">Minimalistic Design</a>
+				
 			</p>
 		</div>
 
